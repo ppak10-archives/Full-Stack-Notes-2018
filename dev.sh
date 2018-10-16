@@ -1,4 +1,4 @@
 #!/bin/bash
-cd flask-javascript
+cd full-stack
 npm run dev
 exit

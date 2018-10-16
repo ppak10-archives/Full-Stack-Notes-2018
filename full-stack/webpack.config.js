@@ -6,7 +6,7 @@
 
 // Path Variables -------------------------------------------------------------
 var path = require('path');
-var BUILD_DIR = path.resolve(__dirname, './server/static/dist');
+var BUILD_DIR = path.resolve(__dirname, './static/dist');
 var APP_DIR = path.resolve(__dirname, './src');
 // ----------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ const configDirs = {
 // Webpack Configuration Function ---------------------------------------------
 function buildConfig(env) {
   if (env === 'dev' || env === 'prod') {
-    return require('./config/' + env + '.js')(configDirs);
+    return require('./webpack/' + env + '.js')(configDirs);
   } else {
     console.log("Webpack build parameter must either be: `dev` or `prod`.")
   }

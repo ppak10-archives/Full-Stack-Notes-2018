@@ -14,7 +14,7 @@ from server.config import Config
 def create_app( config_class = Config ):
 
     # Application Initialization ----------------------------------------------
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder = '../../static')
     app.config.from_object(Config)
 
     # Package Imports ---------------------------------------------------------

@@ -1,5 +1,6 @@
 #!/bin/bash
-cd flask-javascript
+cd full-stack
 npm run build:prod
+cd flask
 python3 run.py
 exit
